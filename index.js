@@ -52,3 +52,34 @@ function seleccionarDia() {
 selectorDia.addEventListener("change", seleccionarDia);
 
 // Ej 3
+
+let selectorPlatos = document.querySelector("#selectorPlatos");
+
+function cargarPlatos() {
+  selectorPlatos.innerHTML = "";
+
+  for (let i = 0; i < platosDisponibles.length; i++) {
+    let plato = platosDisponibles[i];
+
+    selectorPlatos.innerHTML += `
+      <option value="${i}">
+        ${plato.nombre}
+      </option>
+    `;
+  }
+}
+
+cargarPlatos();
+
+// Ej 4
+
+const btnVaciar = document.querySelector("#btnVaciar");
+const contenedorCarta = document.querySelector("#contenedorCarta");
+
+function borrarPlatos() {
+  platosDisponibles.length = 0;
+  contenedorCarta.innerHTML = "No hay platos que mostrar";
+  contenedorCarta.classList.add("carta-vacia");
+}
+
+btnVaciar.addEventListener("click", borrarPlatos);
