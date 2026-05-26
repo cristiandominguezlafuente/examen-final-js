@@ -54,7 +54,7 @@ selectorDia.addEventListener("change", seleccionarDia);
 //Ej 3 + 6
 
 let contenedorCarta = document.querySelector("#contenedorCarta");
-let cartaComida = "";
+let cartaPlato = "";
 
 function pintarCarta() {
   for (let i = 0; i < platosDisponibles.length; i++) {
