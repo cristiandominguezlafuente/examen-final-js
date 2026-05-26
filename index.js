@@ -84,12 +84,3 @@ function vaciarCarta() {
 }
 
 btnVaciar.addEventListener("click", vaciarCarta);
-
-//Ej 7
-
-let contenedorMenu = document.querySelector("#contenedorMenu");
-let menuPrimeros = document.querySelector(platosDisponibles.tipo);
-let menuSegundos = document.querySelector(platosDisponibles.tipo);
-function pintarMenu() {
-  for (let i = 0; i < platosDisponibles.length; i++) {}
-}
