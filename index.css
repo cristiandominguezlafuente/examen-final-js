@@ -1,0 +1,133 @@
+/* ==============================
+           ESTILOS GENERALES
+           En esta zona se define el aspecto visual de toda la página.
+        ============================== */
+
+/* Estilos generales del cuerpo de la página */
+body {
+  font-family:
+    Arial, sans-serif; /* Define la fuente principal de toda la página */
+  margin: 0; /* Elimina el margen por defecto del navegador */
+  background-color: #f4f4f4; /* Aplica un color gris claro al fondo general */
+  color: #222; /* Define el color principal del texto */
+}
+
+/* Estilos de la cabecera superior de la página */
+header {
+  background-color: #222; /* Aplica un fondo oscuro a la cabecera */
+  color: white; /* Pone el texto de la cabecera en color blanco */
+  padding: 20px; /* Añade espacio interior alrededor del contenido */
+  text-align: center; /* Centra el texto de la cabecera */
+}
+
+/* Contenedor principal donde se colocan las secciones */
+main {
+  display: grid; /* Activa CSS Grid para organizar las zonas de la página */
+  grid-template-columns: 1fr 1.5fr 1.5fr; /* Crea tres columnas: controles, carta y menú */
+  gap: 20px; /* Añade separación entre columnas y filas */
+  padding: 20px; /* Añade espacio interior alrededor del contenido principal */
+}
+
+/* Clase para la barra superior donde aparecen el día y la frase */
+.barra-superior {
+  grid-column: 1 / -1; /* Hace que la barra ocupe todas las columnas del grid */
+}
+
+/* Estilos comunes para todas las secciones */
+section {
+  background-color: white; /* Aplica fondo blanco a cada bloque */
+  padding: 20px; /* Añade espacio interior dentro de cada sección */
+  border-radius: 8px; /* Redondea las esquinas de las secciones */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Añade una sombra suave */
+}
+
+/* Estilos para los títulos de segundo nivel */
+h2 {
+  margin-top: 0; /* Elimina el margen superior para alinear mejor el título */
+}
+
+/* Estilos de las etiquetas de formulario */
+label {
+  display: block; /* Hace que cada etiqueta ocupe una línea completa */
+  margin-top: 15px; /* Añade separación superior respecto al elemento anterior */
+  font-weight: bold; /* Pone el texto de la etiqueta en negrita */
+}
+
+/* Estilos comunes para inputs, selectores y botones */
+input,
+select,
+button {
+  width: 100%; /* Hace que ocupen todo el ancho disponible */
+  padding: 8px; /* Añade espacio interior para mejorar la lectura */
+  margin-top: 5px; /* Añade una pequeña separación superior */
+  box-sizing: border-box; /* Incluye padding y borde dentro del ancho total */
+}
+
+/* Estilos específicos de los botones */
+button {
+  cursor: pointer; /* Cambia el cursor para indicar que se puede hacer clic */
+  background-color: #222; /* Aplica fondo oscuro al botón */
+  color: white; /* Pone el texto del botón en blanco */
+  border: none; /* Elimina el borde por defecto */
+  margin-top: 15px; /* Añade separación superior entre botones o controles */
+  border-radius: 4px; /* Redondea ligeramente las esquinas del botón */
+}
+
+/* Estilos del botón cuando el ratón pasa por encima */
+button:hover {
+  background-color: #444; /* Cambia el fondo para indicar interacción */
+}
+
+/* Clase para cada tarjeta o bloque de plato */
+.plato {
+  border: 1px solid #ddd; /* Añade un borde gris claro alrededor del plato */
+  padding: 12px; /* Añade espacio interior dentro de la tarjeta */
+  margin-bottom: 12px; /* Separa un plato del siguiente */
+  border-radius: 6px; /* Redondea las esquinas de la tarjeta */
+  background-color: #fafafa; /* Aplica un fondo muy claro a cada plato */
+}
+
+/* Estilos del título de cada plato */
+.plato h3 {
+  margin-top: 0; /* Elimina el margen superior del título del plato */
+}
+
+/* Estilos de la imagen de cada plato */
+.plato img {
+  width: 100%; /* Hace que la imagen use el ancho disponible */
+  max-width: 180px; /* Limita el tamaño máximo de la imagen */
+  display: block; /* Hace que la imagen se comporte como bloque */
+  margin-top: 10px; /* Añade separación entre el texto y la imagen */
+  border-radius: 6px; /* Redondea las esquinas de la imagen */
+}
+
+/* Clase que se aplica cuando la carta está vacía */
+.carta-vacia {
+  border: 2px dashed #999; /* Añade un borde punteado para indicar estado vacío */
+  color: #666; /* Usa un color gris para el texto del mensaje */
+  text-align: center; /* Centra el texto dentro del contenedor */
+  padding: 30px; /* Añade más espacio interior al mensaje vacío */
+  border-radius: 8px; /* Redondea las esquinas del contenedor vacío */
+}
+
+/* Clase para ocultar una sección */
+.oculto {
+  display: none; /* Oculta completamente el elemento */
+}
+
+/* Clase para la cabecera donde aparecen día y frase */
+.cabecera-menu {
+  background-color: #fff3cd; /* Aplica un fondo amarillo suave */
+  padding: 10px; /* Añade espacio interior */
+  margin-bottom: 15px; /* Separa la cabecera del contenido inferior */
+  border-radius: 6px; /* Redondea las esquinas de la cabecera */
+  font-weight: bold; /* Resalta el texto en negrita */
+}
+
+/* Media query para adaptar el diseño a pantallas pequeñas */
+@media (max-width: 900px) {
+  /* En pantallas pequeñas, el contenido pasa a una sola columna */
+  main {
+    grid-template-columns: 1fr; /* Cambia el grid a una única columna */
+  }
+}

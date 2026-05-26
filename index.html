@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen JavaScript - Generador de menú para restaurante</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Generador de menú para restaurante</h1>
+    </header>
+
+    <main>
+      <!-- =====================================================
+         BARRA SUPERIOR: DÍA Y FRASE
+         Debe mostrarse siempre, tanto entre semana como en fin de semana.
+    ====================================================== -->
+      <section class="barra-superior">
+        <div id="cabeceraMenu" class="cabecera-menu">
+          Día seleccionado: lunes | Frase del día: todavía no se ha escrito
+          ninguna frase.
+        </div>
+      </section>
+
+      <!-- =====================================================
+         ZONA IZQUIERDA: FORMULARIO Y CONTROLES
+    ====================================================== -->
+      <section>
+        <h2>Controles</h2>
+
+        <!-- Ejercicio 1: input de frase del día -->
+        <label for="fraseDia">Frase del día</label>
+        <input
+          type="text"
+          id="fraseDia"
+          placeholder="Escribe la frase del día"
+        />
+
+        <!-- Ejercicio 2: selector de día de la semana -->
+        <label for="selectorDia">Día de la semana</label>
+        <select id="selectorDia">
+          <option value="lunes">Lunes</option>
+          <option value="martes">Martes</option>
+          <option value="miercoles">Miércoles</option>
+          <option value="jueves">Jueves</option>
+          <option value="viernes">Viernes</option>
+          <option value="sabado">Sábado</option>
+          <option value="domingo">Domingo</option>
+        </select>
+
+        <!-- Ejercicio 5: selector de platos generado desde el array -->
+        <label for="selectorPlatos">Selecciona un plato</label>
+        <select id="selectorPlatos"></select>
+
+        <button id="btnAgregar">Añadir plato a la carta</button>
+
+        <!-- Ejercicio 4: botón para vaciar la carta -->
+        <button id="btnVaciar">Vaciar carta</button>
+      </section>
+
+      <!-- =====================================================
+         ZONA CENTRAL: CARTA
+    ====================================================== -->
+      <section id="seccionCarta">
+        <h2>Carta</h2>
+        <div id="contenedorCarta"></div>
+      </section>
+
+      <!-- =====================================================
+         ZONA DERECHA: MENÚ
+    ====================================================== -->
+      <section id="seccionMenu">
+        <h2>Menú del día</h2>
+
+        <!-- Ejercicio 7: aquí se pinta el menú dividido en primeros y segundos -->
+        <div id="contenedorMenu"></div>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
