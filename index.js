@@ -8,6 +8,13 @@ function cambiarFraseDelDia() {
 
 fraseDia.addEventListener("input", cambiarFraseDelDia);
 
-//Ej 2
+// Ej 2
+let selectorDia = document.querySelector("#selectorDia");
 
-let 
+function seleccionarDia() {
+  cabeceraMenu.innerHTML = fraseDia.value + " - " + selectorDia.value;
+}
+
+selectorDia.addEventListener("change", seleccionarDia);
+
+// Ej 3
