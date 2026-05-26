@@ -51,7 +51,7 @@ function seleccionarDia() {
 
 selectorDia.addEventListener("change", seleccionarDia);
 
-//Ej 3
+//Ej 3 + 6
 
 let contenedorCarta = document.querySelector("#contenedorCarta");
 
@@ -85,7 +85,3 @@ function vaciarCarta() {
 }
 
 btnVaciar.addEventListener("click", vaciarCarta);
-
-//Ej 5
-
-//Ej 6
