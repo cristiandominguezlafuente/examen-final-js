@@ -6,28 +6,28 @@ let platosDisponibles = [
     descripcion: "Ensalada con pollo, lechuga, queso y salsa César",
     tipo: "primero",
     precio: 8.5,
-    foto: "ensalada.jpg",
+    foto: "img/ensalada.jpg",
   },
   {
     nombre: "Macarrones boloñesa",
     descripcion: "Pasta con salsa de tomate y carne picada",
     tipo: "primero",
     precio: 9.0,
-    foto: "macarrones.jpg",
+    foto: "img/macarrones.jpg",
   },
   {
     nombre: "Pollo al horno",
     descripcion: "Pollo asado con patatas",
     tipo: "segundo",
     precio: 11.5,
-    foto: "pollo.jpg",
+    foto: "img/pollo.jpg",
   },
   {
     nombre: "Merluza a la plancha",
     descripcion: "Merluza con verduras salteadas",
     tipo: "segundo",
     precio: 12.0,
-    foto: "merluza.jpg",
+    foto: "img/merluza.jpg",
   },
 ];
 
@@ -64,6 +64,7 @@ function pintarCarta() {
         <h4>${platosDisponibles[i].nombre}</h4>
         <p>${platosDisponibles[i].descripcion}</p>
         <p>${platosDisponibles[i].precio} €</p>
+        <img src="${platosDisponibles[i].foto}" alt="${platosDisponibles[i].nombre}" width="200px">
       </div>
     `;
   }
@@ -88,4 +89,3 @@ btnVaciar.addEventListener("click", vaciarCarta);
 //Ej 5
 
 //Ej 6
-
