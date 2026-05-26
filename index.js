@@ -75,3 +75,15 @@ pintarCarta();
 
 //Ej 4
 
+let btnVaciar = document.querySelector("#btnVaciar");
+let seccionCarta = document.querySelector("#seccionCarta");
+
+function vaciarCarta() {
+  platosDisponibles.length = 0;
+
+  seccionCarta.innerHTML = "No hay platos que mostrar";
+
+  seccionCarta.classList.add("carta-vacia");
+}
+
+btnVaciar.addEventListener("click", vaciarCarta);
