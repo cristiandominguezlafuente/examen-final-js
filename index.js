@@ -79,7 +79,7 @@ let btnVaciar = document.querySelector("#btnVaciar");
 let seccionCarta = document.querySelector("#seccionCarta");
 
 function vaciarCarta() {
-  platosDisponibles.length = 0;
+  platosDisponibles.length = 1;
 
   seccionCarta.innerHTML = "No hay platos que mostrar";
 
