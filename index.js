@@ -9,3 +9,5 @@ function cambiarFraseDelDia() {
 fraseDia.addEventListener("input", cambiarFraseDelDia);
 
 //Ej 2
+
+let 
