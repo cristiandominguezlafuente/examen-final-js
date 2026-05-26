@@ -84,3 +84,8 @@ function vaciarCarta() {
 }
 
 btnVaciar.addEventListener("click", vaciarCarta);
+
+//Ej 5
+
+//Ej 6
+
