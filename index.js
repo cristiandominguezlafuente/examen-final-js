@@ -51,35 +51,27 @@ function seleccionarDia() {
 
 selectorDia.addEventListener("change", seleccionarDia);
 
-// Ej 3
+//Ej 3
 
-let selectorPlatos = document.querySelector("#selectorPlatos");
+let contenedorCarta = document.querySelector("#contenedorCarta");
 
-function cargarPlatos() {
-  selectorPlatos.innerHTML = "";
+function pintarCarta() {
+  let html = "";
 
   for (let i = 0; i < platosDisponibles.length; i++) {
-    let plato = platosDisponibles[i];
-
-    selectorPlatos.innerHTML += `
-      <option value="${i}">
-        ${plato.nombre}
-      </option>
+    html += `
+      <div class="card">
+        <h4>${platosDisponibles[i].nombre}</h4>
+        <p>${platosDisponibles[i].descripcion}</p>
+        <p>${platosDisponibles[i].precio} €</p>
+      </div>
     `;
   }
+
+  contenedorCarta.innerHTML = html;
 }
 
-cargarPlatos();
+pintarCarta();
 
-// Ej 4
+//Ej 4
 
-const btnVaciar = document.querySelector("#btnVaciar");
-const contenedorCarta = document.querySelector("#contenedorCarta");
-
-function borrarPlatos() {
-  platosDisponibles.length = 0;
-  contenedorCarta.innerHTML = "No hay platos que mostrar";
-  contenedorCarta.classList.add("carta-vacia");
-}
-
-btnVaciar.addEventListener("click", borrarPlatos);
