@@ -46,7 +46,7 @@ fraseDia.addEventListener("input", cambiarFraseDelDia);
 let selectorDia = document.querySelector("#selectorDia");
 
 function seleccionarDia() {
-  cabeceraMenu.innerHTML = fraseDia.value + " - " + selectorDia.value;
+  cabeceraMenu.innerHTML = fraseDia.value + " " + selectorDia.value;
 }
 
 selectorDia.addEventListener("change", seleccionarDia);
@@ -54,12 +54,11 @@ selectorDia.addEventListener("change", seleccionarDia);
 //Ej 3 + 6
 
 let contenedorCarta = document.querySelector("#contenedorCarta");
+let cartaComida = "";
 
 function pintarCarta() {
-  let html = "";
-
   for (let i = 0; i < platosDisponibles.length; i++) {
-    html += `
+    cartaPlato += `
       <div class="card">
         <h4>${platosDisponibles[i].nombre}</h4>
         <p>${platosDisponibles[i].descripcion}</p>
@@ -69,7 +68,7 @@ function pintarCarta() {
     `;
   }
 
-  contenedorCarta.innerHTML = html;
+  contenedorCarta.innerHTML = cartaPlato;
 }
 
 pintarCarta();
@@ -85,3 +84,12 @@ function vaciarCarta() {
 }
 
 btnVaciar.addEventListener("click", vaciarCarta);
+
+//Ej 7
+
+let contenedorMenu = document.querySelector("#contenedorMenu");
+let menuPrimeros = document.querySelector(platosDisponibles.tipo);
+let menuSegundos = document.querySelector(platosDisponibles.tipo);
+function pintarMenu() {
+  for (let i = 0; i < platosDisponibles.length; i++) {}
+}
